@@ -92,7 +92,7 @@ class Lista:
 #Metodos para el partcionamiento fijo de diferente tamanio
 
     def hacerParticionesDeDiferenteTamnio(self):
-        particiones =[14,11,20,4,7]
+        particiones =[146,110,202,40,71]
         for i in range(0,len(particiones)):
            self.agregar("",particiones[i],i)
 
