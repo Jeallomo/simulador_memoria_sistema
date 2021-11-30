@@ -1,8 +1,17 @@
+import formatos_memoria
+from Gestor import Gestor
+
 import pandas as np
 from numpy import empty
 
-memoria = empty(2**24, dtype=bytes) #Tamaño total de memoria
 
+memoria = empty((int)((2**24)/4), dtype=int) #Tamaño total de memoria
+
+gestor = Gestor(memoria, 1)
+gestor.initProceso("Word", 50000)
+gestor.initProceso("Chrome", 50000)
+gestor.initProceso("Word", 50000)
+gestor.initProceso("Chrome", 50000)
 
 x = 0
 
@@ -17,4 +26,4 @@ numeroProceso = 45
 #   x+=1
 
 # particion fija (16MiB 32 particiones) = 524288 bytes
-print(type(memoria))
+#print(gestor.getBaseEstaticaFija(500))
