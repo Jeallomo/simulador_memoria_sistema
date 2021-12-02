@@ -1,10 +1,11 @@
 class Process:
-    def __init__(self, PID: int, base:int, tamaño:int, nombre: str, estado:int) -> None:
+    def __init__(self, PID: int, base:int, tamaño:int, nombre: str, estado:int, particion: int) -> None:
         self.PID = PID
         self.base = base
         self.tamaño = tamaño
         self.nombre = nombre
         self.estado = estado
+        self.particion = particion
 
     def getPID(self) -> int:
         return self.PID
@@ -20,3 +21,6 @@ class Process:
     
     def getEstado(self) -> int:
         return self.estado
+
+    def getParticion(self) -> int:
+        return self.particion

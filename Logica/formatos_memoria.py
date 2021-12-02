@@ -1,8 +1,8 @@
 particionFija = ((int)(2**24)/16/4) #Tamaño de cada una de las particiones
 
 estaticaFija = [
-  [particionFija*0, particionFija*1, True],           #Particiones de 1MiB
-  [(particionFija*1)+1, particionFija*2, True],
+  [particionFija*0, particionFija*1, False],           #Particiones de 1MiB
+  [(particionFija*1)+1, particionFija*2, False],
   [(particionFija*2)+1, particionFija*3, False],
   [(particionFija*3)+1, particionFija*4, False],
   [(particionFija*4)+1, particionFija*5, False],
