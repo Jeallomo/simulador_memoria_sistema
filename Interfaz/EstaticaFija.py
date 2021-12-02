@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import (QWidget, QApplication, QDialog, QMenu, QAction, QAc
                             QVBoxLayout, QHBoxLayout,QTableWidget,QTableWidgetItem,
                             QAbstractItemView, QGridLayout, QComboBox, QFrame, QLineEdit
                             )
+import simulador as simu
 
 class EstaticaFija(QMainWindow):
     def __init__(self,sql=None):
@@ -23,6 +24,10 @@ class EstaticaFija(QMainWindow):
         self.label.setScaledContents(True)
         
         self.groupMainWindow()
+        
+        self.CrearProceso = simu.Simulador.getGestorCreateProcess()
+        self.ptCargar.clicked.connect(self.CrearProceso)
+        
         
     
     def groupMainWindow(self):
